@@ -22,9 +22,9 @@ class DetailCandidateBloc
     on<_OpenEmail>(_openEmail);
   }
 
-  EmailResponse? _emailData;
-  AddressResponse? _addressData;
-  ExperienceResponse? _experienceData;
+  EmailResponse _emailData = EmailResponse.empty();
+  AddressResponse _addressData = AddressResponse.empty();
+  ExperienceResponse _experienceData = ExperienceResponse.empty();
 
   void _fetchData(_FetchData event, Emitter<DetailCandidateState> emit) async {
     emit(const DetailCandidateState.loading());
@@ -34,19 +34,15 @@ class DetailCandidateBloc
         _fetchExperience(event.id),
         _fetchAddress(event.id),
       ]);
-      if (_emailData != null &&
-          _addressData != null &&
-          _experienceData != null) {
-        emit(DetailCandidateState.loaded(
-            _emailData!, _addressData!, _experienceData!));
-      }
+      emit(DetailCandidateState.loaded(
+          _emailData, _addressData, _experienceData));
     } on FetchHttpException catch (e) {
       if (e.statusCode == 401) {
         emit(const DetailCandidateState.unauthorized());
       } else {
         emit(DetailCandidateState.failure(e.message));
       }
-    } on NetworkException catch (e) {
+    } on NetworkException catch (_) {
       emit(const DetailCandidateState.noInternet());
     }
   }
@@ -57,8 +53,11 @@ class DetailCandidateBloc
           await _dataListClient.fetchListEmails();
       _emailData =
           emailResponse.results.firstWhere((element) => element.id == id);
-    } catch (_) {
+    } on NetworkException catch (_) {
       rethrow;
+    } catch (_) {
+      throw FetchHttpException(
+          message: 'There is something wrong in Email Data', statusCode: 400);
     }
   }
 
@@ -68,8 +67,12 @@ class DetailCandidateBloc
           await _dataListClient.fetchListExperiences();
       _experienceData =
           experienceResponse.results.firstWhere((element) => element.id == id);
-    } catch (_) {
+    } on NetworkException catch (_) {
       rethrow;
+    } catch (_) {
+      throw FetchHttpException(
+          message: 'There is something wrong in Experience Data',
+          statusCode: 400);
     }
   }
 
@@ -79,8 +82,11 @@ class DetailCandidateBloc
           await _dataListClient.fetchListAddress();
       _addressData =
           addressResponse.results.firstWhere((element) => element.id == id);
-    } catch (_) {
+    } on NetworkException catch (_) {
       rethrow;
+    } catch (_) {
+      throw FetchHttpException(
+          message: 'There is something wrong in Address Data', statusCode: 400);
     }
   }
 

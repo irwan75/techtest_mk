@@ -45,4 +45,8 @@ class EmailResponse {
   }
 
   String toJson() => json.encode(toMap());
+
+  factory EmailResponse.empty() {
+    return EmailResponse(id: 0, email: '', phone: '');
+  }
 }

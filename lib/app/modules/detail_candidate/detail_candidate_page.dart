@@ -8,6 +8,7 @@ import 'package:maukerja_techtest/app/common_widgets/page_notif/page_notif_no_in
 import 'package:maukerja_techtest/app/common_widgets/page_notif/page_notif_unauthorized.dart';
 import 'package:maukerja_techtest/app/modules/detail_candidate/bloc/detail_candidate_bloc.dart';
 import 'package:maukerja_techtest/app/res/color_custom.dart';
+import 'package:maukerja_techtest/app/res/path_image.dart';
 import 'package:maukerja_techtest/app/res/style_custom.dart';
 import 'package:shared/mixin/mixin_status.dart';
 
@@ -40,6 +41,13 @@ class DetailCandidatePage extends BaseScaffold<DetailCandidateBloc>
       BasePageView(
         smartphoneView: BlocBuilder<DetailCandidateBloc, DetailCandidateState>(
           builder: (contextBlocBuilder, state) => state.when(
+            noData: () => Center(
+              child: SizedBox(
+                width: 270,
+                height: 270,
+                child: Image.asset(PathImage.noData),
+              ),
+            ),
             loading: () => const Center(
               child: CircularProgressIndicator(),
             ),

@@ -623,6 +623,7 @@ mixin _$DetailCandidateState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
+    required TResult Function() noData,
     required TResult Function(
             EmailResponse emailResponse,
             AddressResponse addressResponse,
@@ -636,6 +637,7 @@ mixin _$DetailCandidateState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? loading,
+    TResult Function()? noData,
     TResult Function(
             EmailResponse emailResponse,
             AddressResponse addressResponse,
@@ -649,6 +651,7 @@ mixin _$DetailCandidateState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
+    TResult Function()? noData,
     TResult Function(
             EmailResponse emailResponse,
             AddressResponse addressResponse,
@@ -663,6 +666,7 @@ mixin _$DetailCandidateState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_PageLoading value) loading,
+    required TResult Function(_NoData value) noData,
     required TResult Function(_PageLoaded value) loaded,
     required TResult Function(_NoInternetConnection value) noInternet,
     required TResult Function(_Unauthorized value) unauthorized,
@@ -672,6 +676,7 @@ mixin _$DetailCandidateState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_PageLoading value)? loading,
+    TResult Function(_NoData value)? noData,
     TResult Function(_PageLoaded value)? loaded,
     TResult Function(_NoInternetConnection value)? noInternet,
     TResult Function(_Unauthorized value)? unauthorized,
@@ -681,6 +686,7 @@ mixin _$DetailCandidateState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_PageLoading value)? loading,
+    TResult Function(_NoData value)? noData,
     TResult Function(_PageLoaded value)? loaded,
     TResult Function(_NoInternetConnection value)? noInternet,
     TResult Function(_Unauthorized value)? unauthorized,
@@ -749,6 +755,7 @@ class _$_PageLoading implements _PageLoading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
+    required TResult Function() noData,
     required TResult Function(
             EmailResponse emailResponse,
             AddressResponse addressResponse,
@@ -765,6 +772,7 @@ class _$_PageLoading implements _PageLoading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? loading,
+    TResult Function()? noData,
     TResult Function(
             EmailResponse emailResponse,
             AddressResponse addressResponse,
@@ -781,6 +789,7 @@ class _$_PageLoading implements _PageLoading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
+    TResult Function()? noData,
     TResult Function(
             EmailResponse emailResponse,
             AddressResponse addressResponse,
@@ -801,6 +810,7 @@ class _$_PageLoading implements _PageLoading {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_PageLoading value) loading,
+    required TResult Function(_NoData value) noData,
     required TResult Function(_PageLoaded value) loaded,
     required TResult Function(_NoInternetConnection value) noInternet,
     required TResult Function(_Unauthorized value) unauthorized,
@@ -813,6 +823,7 @@ class _$_PageLoading implements _PageLoading {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_PageLoading value)? loading,
+    TResult Function(_NoData value)? noData,
     TResult Function(_PageLoaded value)? loaded,
     TResult Function(_NoInternetConnection value)? noInternet,
     TResult Function(_Unauthorized value)? unauthorized,
@@ -825,6 +836,7 @@ class _$_PageLoading implements _PageLoading {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_PageLoading value)? loading,
+    TResult Function(_NoData value)? noData,
     TResult Function(_PageLoaded value)? loaded,
     TResult Function(_NoInternetConnection value)? noInternet,
     TResult Function(_Unauthorized value)? unauthorized,
@@ -840,6 +852,145 @@ class _$_PageLoading implements _PageLoading {
 
 abstract class _PageLoading implements DetailCandidateState {
   const factory _PageLoading() = _$_PageLoading;
+}
+
+/// @nodoc
+abstract class _$NoDataCopyWith<$Res> {
+  factory _$NoDataCopyWith(_NoData value, $Res Function(_NoData) then) =
+      __$NoDataCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$NoDataCopyWithImpl<$Res>
+    extends _$DetailCandidateStateCopyWithImpl<$Res>
+    implements _$NoDataCopyWith<$Res> {
+  __$NoDataCopyWithImpl(_NoData _value, $Res Function(_NoData) _then)
+      : super(_value, (v) => _then(v as _NoData));
+
+  @override
+  _NoData get _value => super._value as _NoData;
+}
+
+/// @nodoc
+
+class _$_NoData implements _NoData {
+  const _$_NoData();
+
+  @override
+  String toString() {
+    return 'DetailCandidateState.noData()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _NoData);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function() noData,
+    required TResult Function(
+            EmailResponse emailResponse,
+            AddressResponse addressResponse,
+            ExperienceResponse experienceResponse)
+        loaded,
+    required TResult Function() noInternet,
+    required TResult Function() unauthorized,
+    required TResult Function(String message) failure,
+  }) {
+    return noData();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function()? noData,
+    TResult Function(
+            EmailResponse emailResponse,
+            AddressResponse addressResponse,
+            ExperienceResponse experienceResponse)?
+        loaded,
+    TResult Function()? noInternet,
+    TResult Function()? unauthorized,
+    TResult Function(String message)? failure,
+  }) {
+    return noData?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function()? noData,
+    TResult Function(
+            EmailResponse emailResponse,
+            AddressResponse addressResponse,
+            ExperienceResponse experienceResponse)?
+        loaded,
+    TResult Function()? noInternet,
+    TResult Function()? unauthorized,
+    TResult Function(String message)? failure,
+    required TResult orElse(),
+  }) {
+    if (noData != null) {
+      return noData();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_PageLoading value) loading,
+    required TResult Function(_NoData value) noData,
+    required TResult Function(_PageLoaded value) loaded,
+    required TResult Function(_NoInternetConnection value) noInternet,
+    required TResult Function(_Unauthorized value) unauthorized,
+    required TResult Function(_Failure value) failure,
+  }) {
+    return noData(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_PageLoading value)? loading,
+    TResult Function(_NoData value)? noData,
+    TResult Function(_PageLoaded value)? loaded,
+    TResult Function(_NoInternetConnection value)? noInternet,
+    TResult Function(_Unauthorized value)? unauthorized,
+    TResult Function(_Failure value)? failure,
+  }) {
+    return noData?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_PageLoading value)? loading,
+    TResult Function(_NoData value)? noData,
+    TResult Function(_PageLoaded value)? loaded,
+    TResult Function(_NoInternetConnection value)? noInternet,
+    TResult Function(_Unauthorized value)? unauthorized,
+    TResult Function(_Failure value)? failure,
+    required TResult orElse(),
+  }) {
+    if (noData != null) {
+      return noData(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NoData implements DetailCandidateState {
+  const factory _NoData() = _$_NoData;
 }
 
 /// @nodoc
@@ -934,6 +1085,7 @@ class _$_PageLoaded implements _PageLoaded {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
+    required TResult Function() noData,
     required TResult Function(
             EmailResponse emailResponse,
             AddressResponse addressResponse,
@@ -950,6 +1102,7 @@ class _$_PageLoaded implements _PageLoaded {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? loading,
+    TResult Function()? noData,
     TResult Function(
             EmailResponse emailResponse,
             AddressResponse addressResponse,
@@ -966,6 +1119,7 @@ class _$_PageLoaded implements _PageLoaded {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
+    TResult Function()? noData,
     TResult Function(
             EmailResponse emailResponse,
             AddressResponse addressResponse,
@@ -986,6 +1140,7 @@ class _$_PageLoaded implements _PageLoaded {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_PageLoading value) loading,
+    required TResult Function(_NoData value) noData,
     required TResult Function(_PageLoaded value) loaded,
     required TResult Function(_NoInternetConnection value) noInternet,
     required TResult Function(_Unauthorized value) unauthorized,
@@ -998,6 +1153,7 @@ class _$_PageLoaded implements _PageLoaded {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_PageLoading value)? loading,
+    TResult Function(_NoData value)? noData,
     TResult Function(_PageLoaded value)? loaded,
     TResult Function(_NoInternetConnection value)? noInternet,
     TResult Function(_Unauthorized value)? unauthorized,
@@ -1010,6 +1166,7 @@ class _$_PageLoaded implements _PageLoaded {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_PageLoading value)? loading,
+    TResult Function(_NoData value)? noData,
     TResult Function(_PageLoaded value)? loaded,
     TResult Function(_NoInternetConnection value)? noInternet,
     TResult Function(_Unauthorized value)? unauthorized,
@@ -1080,6 +1237,7 @@ class _$_NoInternetConnection implements _NoInternetConnection {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
+    required TResult Function() noData,
     required TResult Function(
             EmailResponse emailResponse,
             AddressResponse addressResponse,
@@ -1096,6 +1254,7 @@ class _$_NoInternetConnection implements _NoInternetConnection {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? loading,
+    TResult Function()? noData,
     TResult Function(
             EmailResponse emailResponse,
             AddressResponse addressResponse,
@@ -1112,6 +1271,7 @@ class _$_NoInternetConnection implements _NoInternetConnection {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
+    TResult Function()? noData,
     TResult Function(
             EmailResponse emailResponse,
             AddressResponse addressResponse,
@@ -1132,6 +1292,7 @@ class _$_NoInternetConnection implements _NoInternetConnection {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_PageLoading value) loading,
+    required TResult Function(_NoData value) noData,
     required TResult Function(_PageLoaded value) loaded,
     required TResult Function(_NoInternetConnection value) noInternet,
     required TResult Function(_Unauthorized value) unauthorized,
@@ -1144,6 +1305,7 @@ class _$_NoInternetConnection implements _NoInternetConnection {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_PageLoading value)? loading,
+    TResult Function(_NoData value)? noData,
     TResult Function(_PageLoaded value)? loaded,
     TResult Function(_NoInternetConnection value)? noInternet,
     TResult Function(_Unauthorized value)? unauthorized,
@@ -1156,6 +1318,7 @@ class _$_NoInternetConnection implements _NoInternetConnection {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_PageLoading value)? loading,
+    TResult Function(_NoData value)? noData,
     TResult Function(_PageLoaded value)? loaded,
     TResult Function(_NoInternetConnection value)? noInternet,
     TResult Function(_Unauthorized value)? unauthorized,
@@ -1215,6 +1378,7 @@ class _$_Unauthorized implements _Unauthorized {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
+    required TResult Function() noData,
     required TResult Function(
             EmailResponse emailResponse,
             AddressResponse addressResponse,
@@ -1231,6 +1395,7 @@ class _$_Unauthorized implements _Unauthorized {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? loading,
+    TResult Function()? noData,
     TResult Function(
             EmailResponse emailResponse,
             AddressResponse addressResponse,
@@ -1247,6 +1412,7 @@ class _$_Unauthorized implements _Unauthorized {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
+    TResult Function()? noData,
     TResult Function(
             EmailResponse emailResponse,
             AddressResponse addressResponse,
@@ -1267,6 +1433,7 @@ class _$_Unauthorized implements _Unauthorized {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_PageLoading value) loading,
+    required TResult Function(_NoData value) noData,
     required TResult Function(_PageLoaded value) loaded,
     required TResult Function(_NoInternetConnection value) noInternet,
     required TResult Function(_Unauthorized value) unauthorized,
@@ -1279,6 +1446,7 @@ class _$_Unauthorized implements _Unauthorized {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_PageLoading value)? loading,
+    TResult Function(_NoData value)? noData,
     TResult Function(_PageLoaded value)? loaded,
     TResult Function(_NoInternetConnection value)? noInternet,
     TResult Function(_Unauthorized value)? unauthorized,
@@ -1291,6 +1459,7 @@ class _$_Unauthorized implements _Unauthorized {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_PageLoading value)? loading,
+    TResult Function(_NoData value)? noData,
     TResult Function(_PageLoaded value)? loaded,
     TResult Function(_NoInternetConnection value)? noInternet,
     TResult Function(_Unauthorized value)? unauthorized,
@@ -1372,6 +1541,7 @@ class _$_Failure implements _Failure {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
+    required TResult Function() noData,
     required TResult Function(
             EmailResponse emailResponse,
             AddressResponse addressResponse,
@@ -1388,6 +1558,7 @@ class _$_Failure implements _Failure {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? loading,
+    TResult Function()? noData,
     TResult Function(
             EmailResponse emailResponse,
             AddressResponse addressResponse,
@@ -1404,6 +1575,7 @@ class _$_Failure implements _Failure {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
+    TResult Function()? noData,
     TResult Function(
             EmailResponse emailResponse,
             AddressResponse addressResponse,
@@ -1424,6 +1596,7 @@ class _$_Failure implements _Failure {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_PageLoading value) loading,
+    required TResult Function(_NoData value) noData,
     required TResult Function(_PageLoaded value) loaded,
     required TResult Function(_NoInternetConnection value) noInternet,
     required TResult Function(_Unauthorized value) unauthorized,
@@ -1436,6 +1609,7 @@ class _$_Failure implements _Failure {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_PageLoading value)? loading,
+    TResult Function(_NoData value)? noData,
     TResult Function(_PageLoaded value)? loaded,
     TResult Function(_NoInternetConnection value)? noInternet,
     TResult Function(_Unauthorized value)? unauthorized,
@@ -1448,6 +1622,7 @@ class _$_Failure implements _Failure {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_PageLoading value)? loading,
+    TResult Function(_NoData value)? noData,
     TResult Function(_PageLoaded value)? loaded,
     TResult Function(_NoInternetConnection value)? noInternet,
     TResult Function(_Unauthorized value)? unauthorized,

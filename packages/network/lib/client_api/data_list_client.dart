@@ -1,4 +1,3 @@
-import 'package:data/models/exceptions/custom_rest_api_exception.dart';
 import 'package:data/models/responses/response.dart';
 import 'package:network/repository/data_list_repository.dart';
 import 'package:network/urls.dart';

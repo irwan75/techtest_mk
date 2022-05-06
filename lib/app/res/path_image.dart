@@ -4,4 +4,5 @@ class PathImage {
       'assets/images/error_unauthorized.png';
   static const String noInternetConnection =
       'assets/images/no_internet_connection.png';
+  static const String noData = 'assets/images/no_data.png';
 }

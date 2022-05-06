@@ -53,4 +53,14 @@ class AddressResponse {
   }
 
   String toJson() => json.encode(toMap());
+
+  factory AddressResponse.empty() {
+    return AddressResponse(
+      id: 0,
+      address: '',
+      city: '',
+      state: '',
+      zip_code: 0,
+    );
+  }
 }

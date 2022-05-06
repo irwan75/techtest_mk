@@ -53,4 +53,14 @@ class ExperienceResponse {
   }
 
   String toJson() => json.encode(toMap());
+
+  factory ExperienceResponse.empty() {
+    return ExperienceResponse(
+      id: 0,
+      status: '',
+      job_title: '',
+      company_name: '',
+      industry: '',
+    );
+  }
 }

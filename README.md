@@ -1,6 +1,14 @@
 # maukerja_techtest
 
-A new Flutter project.
+A Flutter Project based on System Information to Get Candidate & Blog Data, Show Detail Candidate and Blog.
+
+## Features
+
+- Get Candidates and Blogs Data
+- Realtime Search Candidate and Blog
+- Detail Candidate
+- Detail Blog
+- Handling State (Unauthorized, Failure, Problem on Internet Connection)
 
 ## Getting Started
 
@@ -14,3 +22,73 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## Built With 🛠
+
+- [BLoC Pattern](https://bloclibrary.dev/) - Business logic component to separate the business logic with UI.
+- [Go Router](https://pub.dev/packages/go_router) - The package to use declarative routes to reduce complexity.
+- [Freezed](https://pub.dev/packages/freezed) - Plugin code generator for data-classes/unions/pattern-matching/cloning.
+- [Freezed Annotation](https://pub.dev/packages/freezed_annotation) - Annotation for Freezed to generate code, it's always define within Freezed.
+- [Json Serializable](https://pub.dev/packages/json_serializable) - To generate to/from JSON code for a class.
+- [Flutter Lints](https://pub.dev/packages/flutter_lints) - This package contains a recommended set of lints for Flutter apps, packages, and plugins to encourage good coding practices.
+- [http](https://pub.dev/packages/http) - A composable, Future-based library for making HTTP requests.
+- Handle State - (Loading, No Data, Has Data, No Internet Connection, Request Timeout, Fetch HTTP Failure, etc).
+- [Extension Methods](https://dart.dev/guides/language/extension-methods)
+- [Get It](https://pub.dev/packages/get_it) - A Dependency Injection.
+- [Build Runner](https://pub.dev/packages/build_runner) - package provides a concrete way of generating files using Dart code.
+- [Url Launcher](https://pub.dev/packages/url_launcher) - A Flutter plugin for launching/execute a URL Command.
+- [Intl](https://pub.dev/packages/intl) - Provides internationalization and localization facilities, including message translation, plurals and genders, date/number formatting and parsing, and bidirectional text.
+
+## Instruction to Running App
+
+After connecting the smartphone to the laptop/pc via cable media, make sure the device is detected in VSCode/Android Studio
+
+> <p float="left">
+> <img width="735" alt="Screen Shot 2022-03-14 at 16 50 54" src="https://user-images.githubusercontent.com/45123680/158175801-f1381711-4460-4115-8a93-f403c1291dfb.png">
+> <img width="497" alt="Screen Shot 2022-03-14 at 16 51 57" src="https://user-images.githubusercontent.com/45123680/158175809-b50f978e-57e4-465b-a3eb-1671ec026d65.png">
+> </p>
+
+### Installation Package
+
+run this command **_“flutter pub get”_** inside these folder
+
+- “root_project_folder”
+- “root_project_folder/packages/data”
+- “root_project_folder/packages/network”
+- “root_project_folder/packages/services”
+
+or run this command at "root_project_folder"
+
+```
+flutter pub get
+
+flutter pub get packages/services
+
+flutter pub get packages/network
+
+flutter pub get packages/data
+```
+
+### Running App
+
+Type and run this command to start running app
+
+```
+flutter run --profile
+```
+
+**_Note:_**
+To run the application with the stg or prod environment use the commands below:
+
+```
+
+flutter run (debug)
+flutter run --profile (profile)
+flutter run —release (release)
+```
+
+## Author
+
+- **Irwan Ardyansah**
+
+Don't forget to follow me, fork and give me a ⭐
