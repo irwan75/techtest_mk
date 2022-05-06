@@ -23,7 +23,7 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-## Built With 🛠
+## Built With
 
 - [BLoC Pattern](https://bloclibrary.dev/) - Business logic component to separate the business logic with UI.
 - [Go Router](https://pub.dev/packages/go_router) - The package to use declarative routes to reduce complexity.
@@ -92,3 +92,28 @@ flutter run —release (release)
 - **Irwan Ardyansah**
 
 Don't forget to follow me, fork and give me a ⭐
+
+## Question and Answer
+
+> - **What kind of architecture did you use?**
+>   Model-View-BLoC Pattern: This project uses BLoC (business logic component) to separate the business logic with UI itself
+
+> - **What libraries did you add to the app? What are they used for? if you not rely the other library tell us why?** > [Click this text to navigate](#built-with). the reason why i'm not rely to use another library, because i consider use plugin/library from the official team first (flutter team/google team/dart team/recommend by flutter team/etc..) because of security, updated, development, fix issue from developer report, etc.. 
+
+> - **How long did you spend on the test?**
+>   totally it's take 24 hours for development from scratch
+
+> - **If you had more time, what further improvements or new features would you add?**
+>   Because i don't know the purpose of this app, however i've notes to make this app more powerfull. So the first is Advanced Filter (Filter by Status, by Gender, by birthday, by experience, by address, etc..) and for Blogs (Filter by author, tag, keyword content, and created_at)
+
+> - **Which parts of your submission are you most proud of? And why? little advice, dont answer whole project, use one what you think it special.**
+>  \-
+
+> - **Which parts did you spend the most time with? What did you find most difficult?**
+>   Integration with API with consider every state and define handling feature
+
+> - **How did you find the test overall? If you have any suggestions on how we can improve the test or our API, we'd love to hear them, please elaborate more about this.**
+>   Adding some filter in endpoint API request, according i mention on question number four probably
+
+> - **The last question, quality or quantity?**
+>   Quality -> because inside and about in the digital product is confidental (data privacy, connection to server, user experience, and etc..)
