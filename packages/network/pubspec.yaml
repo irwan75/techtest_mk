@@ -1,0 +1,25 @@
+name: network
+version: 1.0.0+1
+publish_to: none
+description: Network Packages.
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: "2.10.5"
+
+dependencies:
+  data:
+    path: ../data
+  shared:
+    path: ../shared
+  maukerja_techtest:
+    path: ../../
+
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

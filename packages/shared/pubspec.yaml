@@ -1,0 +1,28 @@
+name: shared
+version: 1.0.0+1
+publish_to: none
+description: Shared Packages.
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: "2.10.5"
+
+dependencies:
+  data:
+    path: ../data
+  network:
+    path: ../network
+  maukerja_techtest:
+    path: ../../
+
+  flutter:
+    sdk: flutter
+  intl: ^0.17.0
+  http: ^0.13.4
+  url_launcher: ^6.0.12
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
