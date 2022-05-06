@@ -69,6 +69,16 @@ flutter pub get packages/network
 flutter pub get packages/data
 ```
 
+after execute the command above, please execute this command below to generate model and state code: 
+
+```
+flutter pub run build_runner build --delete-conflicting-outputs 
+
+cd packages/data
+
+flutter pub run build_runner build --delete-conflicting-outputs
+```
+
 ### Running App
 
 Type and run this command to start running app
